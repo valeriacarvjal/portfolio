@@ -214,16 +214,30 @@ a {
 
 }
 
-
 .timeline {
+    max-width: 850px;
 
-    margin-top: 100px;
+    margin: 100px auto 0;
 
     display: grid;
 
     gap: 50px;
-
 }
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: var(--timeline-progress, 0px);
+    background: #8d6b61;
+    transition: height 0.2s ease;
+}
+
 
 
 .timeline-item {
@@ -232,7 +246,7 @@ a {
 
     padding: 40px;
 
-    border-left: 2px solid #d8b6bd;
+   
 
 }
 
@@ -384,7 +398,9 @@ a:hover {
 
 .projects {
 
-    margin-top: 100px;
+    max-width: 850px;
+
+    margin: 100px auto 0;
 
     display: flex;
 

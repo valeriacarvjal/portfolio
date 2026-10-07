@@ -51,3 +51,18 @@ heroTimeline
     ease: "power3.out"
 }, "-=0.6");
 
+const timeline = document.querySelector(".timeline");
+
+window.addEventListener("scroll", () => {
+
+    const rect = timeline.getBoundingClientRect();
+
+    const windowHeight = window.innerHeight;
+
+    let progress = windowHeight - rect.top;
+
+    progress = Math.max(0, Math.min(progress, timeline.offsetHeight));
+
+    timeline.style.setProperty("--timeline-progress", `${progress}px`);
+
+});
