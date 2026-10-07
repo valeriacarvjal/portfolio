@@ -234,7 +234,7 @@ a {
     top: 0;
     width: 2px;
     height: var(--timeline-progress, 0px);
-    background: #8d6b61;
+   background: #d8b6bd;
     transition: height 0.2s ease;
 }
 
